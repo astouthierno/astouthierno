@@ -1,0 +1,28 @@
+Écrivez les requêtes SQL appropriées pour insérer tous les enregistrements fournis dans les tables correspondantes.
+1- -- 
+INSERT INTO produits (product_id, nom, prix) VALUES (1, 'Cookies', 10);
+
+INSERT INTO produits (product_id, nom, prix) VALUES (2, 'Candy', 5.2);
+2---
+-- Insérer l'enregistrement 1
+INSERT INTO clients (customer_id, nom, adresse) VALUES (1, 'Ahmed', 'Tunisia');
+
+-- Insérer l'enregistrement 2
+INSERT INTO clients (customer_id, nom, adresse) VALUES (2, 'Coulibaly', 'Sénégal');
+
+-- Insérer l'enregistrement 3
+INSERT INTO clients (customer_id, nom, adresse) VALUES (3, 'Hasan', 'Egypt');
+3- 
+INSERT INTO commandes (order_id,customer_id, product_id, quantite, order_date) 
+VALUES (12,1, 2, 3, '2023-01-22'), 
+             (13,2, 1, 10, '2023-04-14');
+2-2 Mettez à jour la quantité de la deuxième commande, la nouvelle valeur doit être 6.
+UPDATE commandes
+SET quantite = 6
+WHERE order_id = 2;
+2-3 Supprimez le troisième client de la table des clients.
+DELETE FROM clients
+WHERE customer_id = 3;
+2- 4 Supprimez le contenu de la table des commandes, puis déposez la table.
+DELETE FROM commandes;
+DROP TABLE commandes;
